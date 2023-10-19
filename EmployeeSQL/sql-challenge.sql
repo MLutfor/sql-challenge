@@ -39,3 +39,6 @@ CREATE TABLE titles (
     from_date DATE,
     to_date DATE
 );
+
+-- Import the "departments" CSV
+COPY departments FROM 'csv_files/departments.csv' WITH CSV HEADER;

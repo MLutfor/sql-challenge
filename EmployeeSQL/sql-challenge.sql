@@ -1,9 +1,12 @@
+Drop Table departments
 CREATE TABLE departments (
-    
+    dept_no INT,
+    dept_name VARCHAR(20)
 );
 
 CREATE TABLE dept_emp (
-    
+    emp_no VARCHAR(20),
+    dept_no INT
 );
 
 CREATE TABLE dept_manager (

@@ -132,7 +132,7 @@ JOIN "dept_emp" AS de ON e."emp_no" = de."emp_no"
 JOIN "departments" AS d ON de."dept_no" = d."dept_no"
 WHERE d."dept_name" IN ('Sales', 'Development');
 
---8. List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
+---8. List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
 
 SELECT "Last_Name", COUNT(*) AS "Frequency"
 FROM employees

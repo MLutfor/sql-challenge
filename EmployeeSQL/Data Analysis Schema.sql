@@ -5,6 +5,7 @@
 ALTER DATABASE "employee database" SET datestyle TO "ISO, MDY";
 
 SELECT * FROM employees;
+SELECT * FROM salaries;
 
 CREATE TABLE "departments" (
     "dept_no" VARCHAR   NOT NULL,
@@ -72,7 +73,9 @@ REFERENCES "employees" ("emp_no");
 
 SELECT e.emp_no, e."Last_Name", e."First_Name", e."SEX", s.salary
 FROM employees AS e
-JOIN salaries AS s ON e.emp_no = s.emp_no;
+JOIN salaries AS s ON e.emp_no = s.emp_no
+ORDER BY e.emp_no ASC;
+
 
 --2. List the first name, last name, and hire date for the employees who were hired in 1986.
 

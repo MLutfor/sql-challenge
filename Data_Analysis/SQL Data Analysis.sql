@@ -71,6 +71,10 @@ REFERENCES "employees" ("emp_no");
 
 --1. List the employee number, last name, first name, sex, and salary of each employee.
 
+--Before doing any queries make sure there are no duplicate values of emp_no
+CREATE UNIQUE INDEX idx_emp_no ON employees (emp_no);
+
+
 SELECT e.emp_no, e."Last_Name", e."First_Name", e."SEX", s.salary
 FROM employees AS e
 JOIN salaries AS s ON e.emp_no = s.emp_no

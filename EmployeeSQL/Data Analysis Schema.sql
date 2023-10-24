@@ -88,7 +88,7 @@ WHERE EXTRACT(YEAR FROM "hire_date") = 1986;
 SELECT
     d."dept_no",
     d."dept_name",
-    m."emp_no" AS "manager_emp_no",
+    m."emp_no" AS "emp_no",
     e."Last_Name" AS "manager_last_name",
     e."First_Name" AS "manager_first_name"
 FROM "departments" AS d
@@ -104,7 +104,8 @@ SELECT
     d."dept_name"
 FROM "employees" AS e
 JOIN "dept_emp" AS de ON e."emp_no" = de."emp_no"
-JOIN "departments" AS d ON de."dept_no" = d."dept_no";
+JOIN "departments" AS d ON de."dept_no" = d."dept_no"
+ORDER BY e.emp_no ASC;
 
 --5. List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B.
 
@@ -121,7 +122,8 @@ SELECT
 FROM "employees" AS e
 JOIN "dept_emp" AS de ON e."emp_no" = de."emp_no"
 JOIN "departments" AS d ON de."dept_no" = d."dept_no"
-WHERE d."dept_name" = 'Sales';
+WHERE d."dept_name" = 'Sales'
+ORDER BY e.emp_no ASC;
 
 --7. List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
@@ -133,7 +135,8 @@ SELECT
 FROM "employees" AS e
 JOIN "dept_emp" AS de ON e."emp_no" = de."emp_no"
 JOIN "departments" AS d ON de."dept_no" = d."dept_no"
-WHERE d."dept_name" IN ('Sales', 'Development');
+WHERE d."dept_name" IN ('Sales', 'Development')
+ORDER BY e.emp_no ASC;
 
 ---8. List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
 

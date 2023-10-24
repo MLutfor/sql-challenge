@@ -6,10 +6,12 @@ ALTER DATABASE "employee database" SET datestyle TO "ISO, MDY";
 
 SELECT * FROM employees;
 SELECT * FROM salaries;
+SELECT * FROM departments;
+SELECT * FROM titles;
 
 CREATE TABLE "departments" (
-    "dept_no" VARCHAR   NOT NULL,
-    "dept_name" VARCHAR   NOT NULL,
+    "dept_no" VARCHAR(4)   NOT NULL,
+    "dept_name" VARCHAR(50)   NOT NULL,
     CONSTRAINT "pk_departments" PRIMARY KEY (
         "dept_no"
      )
@@ -17,21 +19,21 @@ CREATE TABLE "departments" (
 
 CREATE TABLE "dept_emp" (
     "emp_no" INTEGER   NOT NULL,
-    "dept_no" VARCHAR   NOT NULL
+    "dept_no" VARCHAR(10)   NOT NULL
 );
 
 CREATE TABLE "dept_manager" (
-    "dept_no" VARCHAR   NOT NULL,
+    "dept_no" VARCHAR(10)   NOT NULL,
     "emp_no" INTEGER   NOT NULL
 );
 
 CREATE TABLE "employees" (
     "emp_no" INTEGER   NOT NULL,
-    "emp_title" VARCHAR   NOT NULL,
+    "emp_title" VARCHAR(50)   NOT NULL,
     "birth_date" DATE   NOT NULL,
-    "First_Name" VARCHAR   NOT NULL,
-    "Last_Name" VARCHAR   NOT NULL,
-    "SEX" VARCHAR   NOT NULL,
+    "First_Name" VARCHAR(50)   NOT NULL,
+    "Last_Name" VARCHAR(50)   NOT NULL,
+    "SEX" VARCHAR(1)   NOT NULL,
     "hire_date" DATE   NOT NULL,
     CONSTRAINT "pk_employees" PRIMARY KEY (
         "emp_no"
@@ -44,8 +46,8 @@ CREATE TABLE "salaries" (
 );
 
 CREATE TABLE "titles" (
-    "title_id" VARCHAR   NOT NULL,
-    "title" VARCHAR   NOT NULL,
+    "title_id" VARCHAR(20)   NOT NULL,
+    "title" VARCHAR(50)   NOT NULL,
     CONSTRAINT "pk_titles" PRIMARY KEY (
         "title_id"
      )

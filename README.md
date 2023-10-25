@@ -7,8 +7,10 @@ ChaGPT was also used in the assistance of debugging and refactoring the script.
 The following challenge serves to do a research project about people from a fictional company employed during the 1980s and 1990s.
 All that remains of the employee database from that period are six CSV files.
  
-Within the "Data_Analysis" folder, there are 3 folders, and 1 SQL script for the data analysis.  The "Data Analysis Results" folder
-have screenshots that answer the following questions and labelled by their following numbers. 
+Within the "Data_Analysis" folder, there are 3 folders, and 1 SQL script for the data analysis.  The SQL script "SQL Data Analysis.sql",
+contain 6 tables and many queries to analyze the csv files.
+
+The "Data Analysis Results" folder have screenshots that answer the following questions and labelled by their following numbers. 
 
 Q1. List the employee number, last name, first name, sex, and salary of each employee.
 
@@ -28,5 +30,6 @@ Q8. List the frequency counts, in descending order, of all the employee last nam
 
 
 The "Entity Relationship Diagram" contains the sketch for the Entity Relationship Diagram of the tables in this sql database.
+This was exported from QuickDBD: https://www.quickdatabasediagrams.com/
 
 The "csv_files" contains all the data for the tables created in the sql script.

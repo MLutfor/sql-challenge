@@ -2,12 +2,11 @@
 -- Link to schema: https://app.quickdatabasediagrams.com/#/d/RCMyGX
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
+
+--This makes date format of the csv files more compatible with post gre sql's date format
 ALTER DATABASE "employee database" SET datestyle TO "ISO, MDY";
 
-SELECT * FROM employees;
-SELECT * FROM salaries;
-SELECT * FROM departments;
-SELECT * FROM titles;
+
 
 CREATE TABLE "departments" (
     "dept_no" VARCHAR(4)   NOT NULL,

@@ -1,7 +1,14 @@
 # sql-challenge
+
+The SQL script for this programs IS based on the codes provided by the in-class assignments from the U of T Data Analysis bootcamp. 
+
+ChaGPT was also used in the assistance of debugging and refactoring the script.
+
+The following challenge serves to do a research project about people from a fictional company employed during the 1980s and 1990s.
+All that remains of the employee database from that period are six CSV files.
  
-Within the "Data_Analysis" folder, there are 3 folders, and 1 SQL script.  The "Data Analysis Results" folder
-have screenshots that answer the following questions and labelled in the respective order.  
+Within the "Data_Analysis" folder, there are 3 folders, and 1 SQL script for the data analysis.  The "Data Analysis Results" folder
+have screenshots that answer the following questions and labelled by their following numbers. 
 
 Q1. List the employee number, last name, first name, sex, and salary of each employee.
 
